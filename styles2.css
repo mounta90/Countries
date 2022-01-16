@@ -1,0 +1,75 @@
+:root {
+  --primaryColor: rgba(255, 56, 96, 1);
+  --primaryColorTransparent: rgba(255, 56, 96, 0.85);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Teko", sans-serif;
+}
+
+.Background {
+  height: 200vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./Images/pexels-pixabay-414916.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.Navbar {
+  display: flex;
+  position: fixed;
+  background: var(--primaryColorTransparent);
+  width: 100vw;
+  height: auto;
+}
+
+.NavTabs ul {
+  list-style: none;
+}
+
+.NavTabs li {
+  display: inline-block;
+  padding: 10px 20px;
+  align-content: right;
+  justify-content: right;
+}
+
+.NavTabs a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  position: relative;
+}
+
+.NavTabs a::before {
+  content: "";
+  display: block;
+  background: black;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  position: absolute;
+  top: -25%;
+  left: 0;
+  transform-origin: left;
+  transform: scale(0, 1);
+}
+
+.NavTabs a:hover::before {
+  transform: scale(1, 1);
+  transition: transform 500ms ease-in-out;
+}
+
+.NavTabs a:hover {
+  color: black;
+  transition: color 500ms ease-in-out;
+}

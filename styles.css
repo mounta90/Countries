@@ -1,0 +1,93 @@
+:root {
+  --primaryColor: rgba(255, 56, 96, 1);
+  --primaryColorTransparent: rgba(255, 56, 96, 0.425);
+}
+* {
+  margin: 0;
+  font-family: "Teko", sans-serif;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: darkslategray;
+  display: block;
+  background: var(--primaryColor);
+  height: 0.25rem;
+  width: 100%;
+}
+
+.navbar a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: black;
+  border-radius: 5px;
+  transform-origin: left;
+  transform: scale(0, 1);
+}
+
+.navbar a:hover::before {
+  transform: scale(1, 1);
+  transition: transform ease-in-out 625ms;
+}
+
+.navbar a:hover {
+  color: black;
+  transition: color ease-in-out 1000ms;
+}
+
+.navicon {
+  color: blue;
+}
+.navbar {
+  width: 100vw;
+  height: 10vh;
+  background: var(--primaryColor);
+  position: fixed;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.navbar ul li {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 0.5rem 20%;
+}
+
+.Background {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(./Images/pexels-pixabay-414916.jpg);
+  min-width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.OverBackground {
+  position: absolute;
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  background: var(--primaryColorTransparent);
+  border-radius: 25%;
+  bottom: 15%;
+  left: 25%;
+}
+
+.OverBackground:hover {
+  background: var(--primaryColor);
+  transition: ease-in-out 625ms;
+}
+
+.custom-select {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}

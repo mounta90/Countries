@@ -1,0 +1,82 @@
+:root {
+  --primaryColor: rgba(255, 56, 96, 1);
+  --primaryColorTransparent: rgba(255, 56, 96, 0.85);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Teko", sans-serif;
+}
+
+.navBar {
+  background: lightgreen;
+  position: relative;
+}
+
+.navBar-Items {
+  background: pink;
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+}
+
+.Item {
+  display: inline-block;
+}
+
+/* ----------------------------- */
+
+.container {
+  display: flex;
+  width: 80vw;
+  height: 80vh;
+  outline: 5px solid black;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.box {
+  color: black;
+  font-size: 2rem;
+  flex-basis: 50%;
+}
+
+.box:nth-of-type(3n) {
+  flex-basis: 100%;
+}
+
+.box1 {
+  background: blue;
+}
+.box2 {
+  background: green;
+}
+.box3 {
+  background: yellow;
+}
+.box4 {
+  background: purple;
+}
+.box5 {
+  background: turquoise;
+}
+.box6 {
+  background: red;
+}
+.box7 {
+  background: pink;
+}
+.box8 {
+  background: grey;
+}
+.box9 {
+  background: coral;
+}
